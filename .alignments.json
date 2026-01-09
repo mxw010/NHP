@@ -1,0 +1,30 @@
+{
+    "next_alignment_id": 2,
+    "alignments": {
+        "1": {
+            "method": "Perfect_Match_Aligner",
+            "parameters": {
+                "mismatch_quality_threshold": 20,
+                "variant_sequence_quality_threshold": 30
+            },
+            "library_templates": {
+                "1": 1
+            },
+            "statistics": {
+                "1": {
+                    "Number of Sequences": 36209882,
+                    "Alignment rate": 0.0,
+                    "Template Mismatch Failure Rate": 0.9999826842849142,
+                    "Paired End Mismatch Failure Rate": 0.0,
+                    "Variant Quality Failure Rate": 1.728809831526101e-05,
+                    "Variant Nucleotide Mismatch Rate": 2.7616770471662956e-08,
+                    "Template Size Mismatch Rate": 0.0,
+                    "Invalid nucleotide Rate": 0.0,
+                    "Expected Number of Misreads": 0,
+                    "Number Single Count Sequences": 0
+                }
+            }
+        }
+    },
+    "active_alignment": 0
+}
