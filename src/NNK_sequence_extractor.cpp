@@ -385,15 +385,15 @@ void processAndExtract(const std::string& fastqFile,
     
     outFile.close();
     
-    std::cout << R"("total_reads: ")" << totalReads << R"(",)" << std::endl;
-    std::cout << R"("passed_qc: ")" << passedQuality << R"(",)" << std::endl;
-    std::cout << R"("matched_flanking: ")" << matchedFlanking << R"(",)" << std::endl;
-    std::cout << R"("extracted: ")" << validSequences.size() << R"(",)" << std::endl;
-    std::cout << R"("valid_NNK: ")" << validNNK << R"(",)" << std::endl;
-    std::cout << R"("invalid_NNK: ")" << invalidNNK << R"(",)" << std::endl;
-    std::cout << R"("valid_codons: ")" << normalPeptides << R"(",)" << std::endl;
-    std::cout << R"("stop_codons: ")" << StopPeptides << R"(",)" << std::endl;
-    std::cout << R"("output: ")" << outputFile << R"(",)" << std::endl;
+    std::cout << R"("total_reads": ")" << totalReads << R"(",)" << std::endl;
+    std::cout << R"("passed_qc": ")" << passedQuality << R"(",)" << std::endl;
+    std::cout << R"("matched_flanking": ")" << matchedFlanking << R"(",)" << std::endl;
+    std::cout << R"("extracted": ")" << validSequences.size() << R"(",)" << std::endl;
+    std::cout << R"("valid_NNK": ")" << validNNK << R"(",)" << std::endl;
+    std::cout << R"("invalid_NNK": ")" << invalidNNK << R"(",)" << std::endl;
+    std::cout << R"("valid_codons": ")" << normalPeptides << R"(",)" << std::endl;
+    std::cout << R"("stop_codons": ")" << StopPeptides << R"(",)" << std::endl;
+    std::cout << R"("output": ")" << outputFile << R"(")" << std::endl;
     std::cout << "}" << std::endl;
 }
 
@@ -446,14 +446,14 @@ int main(int argc, char* argv[]) {
         flanking.nnkLength = analysis.nnkLength;
         
         std::cout << "{" << std::endl;
-        std::cout << R"("reference: ")" << refSequence << R"(",)" << std::endl;
-        std::cout << R"("fastq: ")" << fastqFile << R"(",)" << std::endl;
-        std::cout << R"("min_quality: ")" << std::to_string(minQuality) << R"(",)" << std::endl;
-        std::cout << R"("start_position: ")" << analysis.nnkStartPos << R"(",)" << std::endl;
-        std::cout << R"("NNK_length: ")" << analysis.nnkLength << R"(",)" << std::endl;
-        std::cout << R"("flanking: ")" << flanking.upstream << R"(",)" << std::endl;
-        std::cout << R"("upstream_rc: ")" << flanking.upstreamRC << R"(",)" << std::endl;
-        std::cout << R"("downstream_rc: ")" << flanking.downstreamRC << R"(",)" << std::endl;
+        std::cout << R"("reference": ")" << refSequence << R"(",)" << std::endl;
+        std::cout << R"("fastq": ")" << fastqFile << R"(",)" << std::endl;
+        std::cout << R"("min_quality": ")" << std::to_string(minQuality) << R"(",)" << std::endl;
+        std::cout << R"("start_position": ")" << analysis.nnkStartPos << R"(",)" << std::endl;
+        std::cout << R"("NNK_length": ")" << analysis.nnkLength << R"(",)" << std::endl;
+        std::cout << R"("flanking": ")" << flanking.upstream << R"(",)" << std::endl;
+        std::cout << R"("upstream_rc": ")" << flanking.upstreamRC << R"(",)" << std::endl;
+        std::cout << R"("downstream_rc": ")" << flanking.downstreamRC << R"(",)" << std::endl;
 
         processAndExtract(fastqFile, flanking, minQuality, outputFile);
         
